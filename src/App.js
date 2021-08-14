@@ -13,7 +13,7 @@ function App() {
   let Gym=[]
   let Hospital=[]
   let Restaurant=[]
-  let bestHouse= "Checking"
+  
 
   function fetchData(){
      //console.log(value[0][0].value)
@@ -182,18 +182,28 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>House Recommendation System</h1>
-        <p1>Please put a valid data and Mention the serial number also with your data
-          Ex. House1, House2 ....
-          Accepted keywords:
-          House
-          Jym
-          Hospital
-        </p1>
+        <div style={{backgroundColor:'#009688', fontSize:15, borderRadius:10, padding:15}} >
+          <p1>Please put a valid data and Mention the serial number also with your data</p1>
+          <br/>
+          <p1>- Example - </p1> 
+          <br/>
+          <p1>House1, House2, ....HouseN</p1>
+          <br/>
+          <p1>Gym1, Gym2, ....GymN</p1>
+          <br/>
+          <p1>Hospital1, Hospital2, ....HospitalN</p1>
+          <br/>
+          <p1>Restaurant1, Restaurant2, ....RestaurantN</p1>
+          <br/>
+          <p1>*** N is a natural number, and should be between 1 to no of your column</p1>
+          <br/>
+          <p1>*** Don't use House, Gym, Hospital, Restaurant without serial number!</p1>
+        </div>
         <h1></h1>
         <ReactInputMatrix onMatrixChange={(data) => setValue(data)} />
 
         <h1></h1>
-        <button style={{width: '200px', height: '40px',margin: '15px', fontSize:15}} onClick={fetchData}>
+        <button style={{width: '200px', height: '40px',margin: '15px', fontSize:15, color:'white', backgroundColor:'#9900EF', borderRadius:10}} onClick={fetchData}>
           Recommend Me
         </button>
 
